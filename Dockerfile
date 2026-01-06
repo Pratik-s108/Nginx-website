@@ -11,8 +11,9 @@ ADD https://templatemo.com/live/templatemo_595_3d_coverflow /usr/share/nginx/htm
 # index.html file then the css file which is donloaded renaming that file to 
 # index.html 
 RUN cd /usr/share/nginx/html/ && \
-	rm index.html && \
-	mv templatemo_595_3d_coverflow index.html
+	rm * && \
+	mv templatemo_595_3d_coverflow index.html && \
+	chmod 755 index.html
 
 # Expose port 80 so external users can access the website via HTTP
 EXPOSE 80

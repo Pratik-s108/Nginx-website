@@ -11,7 +11,7 @@ ADD https://templatemo.com/live/templatemo_595_3d_coverflow /usr/share/nginx/htm
 # index.html file then the css file which is donloaded renaming that file to 
 # index.html 
 RUN cd /usr/share/nginx/html/ && \
-	rm * && \
+	rm /usr/share/nginx/html/* && \
 	mv templatemo_595_3d_coverflow index.html && \
 	chmod 755 index.html
 
